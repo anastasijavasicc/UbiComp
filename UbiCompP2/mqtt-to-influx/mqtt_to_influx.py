@@ -29,6 +29,10 @@ def on_message(client, userdata, msg):
 
         data = json.loads(payload)
 
+        if "ambient" not in data or "r" not in data or "g" not in data or "b" not in data:
+            print("Skipping non-sensor event message.")
+            return
+    
         point = (
             Point("light_color_measurements")
             .field("active", int(data.get("active", 0)))
