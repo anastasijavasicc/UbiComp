@@ -72,6 +72,10 @@ def on_message(client, userdata, msg):
         payload = msg.payload.decode("utf-8")
         data = json.loads(payload)
 
+        if "ambient" not in data or "r" not in data or "g" not in data or "b" not in data:
+            print("Skipping non-sensor event message.")
+            return
+
         ambient = int(data.get("ambient", 0))
         r = int(data.get("r", 0))
         g = int(data.get("g", 0))
