@@ -9,9 +9,6 @@ Na Raspberry Pi uredjaju podaci se prosledjuju na MQTT broker, cuvaju u InfluxDB
 - Arduino Nano 33 BLE Sense Lite
 - Raspberry Pi 4 Model B
 - APDS9960 senzor (ambient light + RGB color)
-- MicroSD kartica
-- USB-C napajanje
-- USB veza izmedju Arduino i Raspberry Pi uredjaja
 
 ## Koriscene tehnologije
 - Arduino IDE
